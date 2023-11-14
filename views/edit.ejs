@@ -1,0 +1,44 @@
+
+<%- include('layout/header') %>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 mx-auto mt-4">
+        <div class="card shadow">
+            <div class="card-body p-4">
+                <div class="card-header bg-primary">
+
+                    <h2 class="text-light">Edit User</h2>
+                    </div>
+      <form action="/update/<%= user._id %>" method="POST">
+        <div class="mb-3">
+          <label for="firstname" class="form-label">First Name</label>
+          <input type="text" class="form-control form-control-lg" id="firstname" name="firstname" value="<%= user.firstname %>" required>
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Last Name</label>
+          <input type="text" class="form-control form-control-lg"id="lastname" name="lastname" value="<%= user.lastname %>" required>
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
+          <input type="number" class="form-control form-control-lg" id="age" name="age" value="<%= user.age %>" required>
+        </div>
+        <div class="mb-3">
+          <label for="monthlyIncome" class="form-label">Monthly Income</label>
+          <input type="number" class="form-control form-control-lg" id="monthlyIncome" name="monthlyIncome" value="<%= user.monthlyIncome %>" required>
+        </div>
+        <div class="mb-3">
+          <label for="phonenumber" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control form-control-lg" id="phonenumber" name="phonenumber" value="<%= user.phonenumber %>" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-100o">Update User</button>
+      </form>
+                
+            </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>
